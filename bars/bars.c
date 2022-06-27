@@ -1,4 +1,4 @@
-#include <cbars/cbars.h>
+#include "bars.h"
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>

@@ -1,8 +1,5 @@
-# cbars/cbars.h
+# bars/bars.h
 CBars is a small c99 library for progress bars in the terminal.
-
-# Why??????
-I was bored and wanted an excuse to code C.
 
 # Example
 ```c
@@ -27,3 +24,5 @@ Loading Level: [---------------------------------------                       ] 
 # Missing features that I might implement when I feel like it
 > Background colors <br>
 > Text effects (Bold, Italic, etc)
+
+## Forked from https://github.com/NongusStudios/cbars
