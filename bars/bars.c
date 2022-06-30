@@ -25,7 +25,7 @@ cbar_color_desc_t cbar_color_desc(double   progress,
                                   uint32_t fill_color,
                                   uint32_t none_color,
                                   uint32_t before_color,
-                                  uint32_t after_color)                         {
+                                  uint32_t after_color) {
   return((cbar_color_desc_t){
     .progress = progress,
     .begin_color = begin_color,
@@ -54,7 +54,7 @@ cbar_t cbar(uint32_t length,
             char     fill,
             char     none,
             char     *before,
-            char     *after)                   {
+            char     *after) {
   return((cbar_t){
     .progress = 0.0,
     .length = length,
@@ -112,7 +112,7 @@ void cbar_display_bars(const cbar_t *bars, size_t count){
 
 
 void cbar_display_bar_colored(const cbar_t *pbar,
-                              cbar_color_desc_t *descriptors, size_t desc_count)                                                      {
+                              cbar_color_desc_t *descriptors, size_t desc_count) {
   assert(pbar != NULL);
   assert(desc_count > 0);
   const cbar_t bar = *pbar;
@@ -170,7 +170,7 @@ void cbar_display_bar_colored(const cbar_t *pbar,
 void cbar_display_bars_colored(const cbar_t      *bars,
                                cbar_color_desc_t **descriptors,
                                size_t            *desc_counts,
-                               size_t            count)                 {
+                               size_t            count) {
   for (size_t i = 0; i < count; i++) {
     const cbar_t bar = bars[i];
     assert(bar.length > 2);

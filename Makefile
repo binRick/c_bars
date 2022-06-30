@@ -44,7 +44,7 @@ fix-dbg:
 	@$(SED) 's|, % lu);|, %lu);|g' -i $(TIDIED_FILES)
 	@$(SED) 's|, % d);|, %d);|g' -i $(TIDIED_FILES)
 	@$(SED) 's|, % zu);|, %zu);|g' -i $(TIDIED_FILES)
-tidy: uncrustify uncrustify-clean fix-dbg add-meson-deps
+tidy: uncrustify uncrustify-clean fix-dbg
 pull:
 	@git pull
 nodemon:
