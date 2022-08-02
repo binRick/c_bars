@@ -6,7 +6,7 @@ bars_include_dirs = [
 ]
 bars_test_deps = [
   bars_dep,
-  greatest_dep,
+  c_greatest_dep,
 ]
 
 if get_option('enable-binaries')

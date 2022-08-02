@@ -6,10 +6,13 @@ pwd = meson.current_source_dir()
 inc = [
   include_directories(
    'bars',
+   'submodules/c_deps',
   ),
 ]
 #############################################################################
-subdir('meson/deps/greatest')
+subdir('submodules/c_deps/meson/deps/parson')
+subdir('submodules/c_deps/meson/deps/c_greatest')
+#############################################################################
 #############################################################################
 subdir('bars')
 subdir('bars-test')

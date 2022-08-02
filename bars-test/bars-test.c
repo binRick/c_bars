@@ -1,6 +1,6 @@
 #include "bars-test.h"
 #include "bars.h"
-#include "greatest.h"
+#include "submodules/c_greatest/greatest/greatest.h"
 
 
 TEST t_bars(void) {
