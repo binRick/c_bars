@@ -5,3 +5,4 @@
 *.out
 submodules
 .make-latest-log-summary.txt
+submodules/c_deps
