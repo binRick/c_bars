@@ -37,4 +37,3 @@ void cbar_display_bars_colored(const cbar_t *bars, cbar_color_desc_t **descripto
 
 void cbar_hide_cursor();
 void cbar_show_cursor();
-

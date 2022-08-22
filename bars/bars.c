@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 cbar_color_desc_t cbar_color_fill(double progress, uint32_t color){
   return((cbar_color_desc_t){
     .progress = progress,
@@ -17,7 +16,6 @@ cbar_color_desc_t cbar_color_fill(double progress, uint32_t color){
     .after_color = color,
   });
 }
-
 
 cbar_color_desc_t cbar_color_desc(double   progress,
                                   uint32_t begin_color,
@@ -37,16 +35,13 @@ cbar_color_desc_t cbar_color_desc(double   progress,
   });
 }
 
-
 void set_color(uint32_t code){
   printf("\033[%um", code);
 }
 
-
 void reset_color(){
   printf("\033[0m");
 }
-
 
 cbar_t cbar(uint32_t length,
             char     begin,
@@ -66,7 +61,6 @@ cbar_t cbar(uint32_t length,
     .after = after,
   });
 }
-
 
 void cbar_display_bar(const cbar_t *pbar){
   assert(pbar != NULL);
@@ -89,7 +83,6 @@ void cbar_display_bar(const cbar_t *pbar){
   fflush(stdout);
 }
 
-
 void cbar_display_bars(const cbar_t *bars, size_t count){
   for (size_t i = 0; i < count; i++) {
     const cbar_t bar = bars[i];
@@ -109,7 +102,6 @@ void cbar_display_bars(const cbar_t *bars, size_t count){
   }
   printf("\033[%luF", count);
 }
-
 
 void cbar_display_bar_colored(const cbar_t *pbar,
                               cbar_color_desc_t *descriptors, size_t desc_count) {
@@ -166,7 +158,6 @@ void cbar_display_bar_colored(const cbar_t *pbar,
   fflush(stdout);
 } /* cbar_display_bar_colored */
 
-
 void cbar_display_bars_colored(const cbar_t      *bars,
                                cbar_color_desc_t **descriptors,
                                size_t            *desc_counts,
@@ -218,13 +209,10 @@ void cbar_display_bars_colored(const cbar_t      *bars,
   printf("\033[%luF", count);
 } /* cbar_display_bars_colored */
 
-
 void cbar_hide_cursor(){
   printf("\033[?25l");
 }
 
-
 void cbar_show_cursor(){
   printf("\033[?25h");
 }
-
