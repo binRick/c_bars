@@ -6,3 +6,5 @@
 submodules
 .make-latest-log-summary.txt
 submodules/c_deps
+.meson.build*.log
+.meson-build*.log

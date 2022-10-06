@@ -8,7 +8,7 @@ bars_inc_dirs = [
 ]
 bars_deps = [
 ]
-bars_lib = static_library('bars',
+bars_lib = library('bars',
   bars_srcs,
   install: true,
   dependencies: bars_deps,
